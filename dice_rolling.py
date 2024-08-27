@@ -1,6 +1,8 @@
 import random
 
+#Empty dictionary, which will store all the frequency of the sum obtained, with the corresponding values
 frequency = {}
+#All the possible values that can be a sum of 6-faced dice
 frequency[2] = 0
 frequency[3] = 0
 frequency[4] = 0
@@ -13,11 +15,10 @@ frequency[10] = 0
 frequency[11] = 0
 frequency[12] = 0
 
-
+#Stimulation of rolling of two 6-faced dice
 for i in range(1, 1001):
   dice1 = random.randint(1, 6)
   dice2 = random.randint(1, 6)
-  global result_sum
   result_sum = dice1 + dice2
   frequency[result_sum] += 1 
   print("First dice's value: " + str(dice1) + " + " + "Second dice's value: " + str(dice2) + "   The sum is: " + " = " +  str(result_sum))
