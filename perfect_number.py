@@ -14,12 +14,15 @@ def sum_of_proper_div(n):
   if divisors == n:
     return divisors
 
+#Function for finding the perfect number in given range
 def find_perfect_numbers(start, end):
+  #Empty list, which will store all the perfect numbers in given range.
   perfect_numbers = []
-  
+
+  #This loop will be iterating through the given start and end values.
   for num in range(start, end + 1):
-    if sum_of_proper_div(num):
-      perfect_numbers.append(num)
+    if sum_of_proper_div(num):# Validating the value through the function which checks the number is the perfect number or not.
+      perfect_numbers.append(num)#Appending the value in the list
       
   return perfect_numbers
 
